@@ -76,8 +76,6 @@ async function getSummaryByUserId(req, res) {
       income: parseFloat(incomeResult[0].income),
       expense: parseFloat(expenseResult[0].expense),
     });
-
-    res.status(200).json(summary);
   } catch (error) {
     console.error("Error fetching transaction summary:", error);
     return res.status(500).json({ error: "Internal server error" });
